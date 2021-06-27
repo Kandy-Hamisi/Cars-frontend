@@ -1,0 +1,161 @@
+/* mobile : 375px */
+/* Desktop: 1440px */
+
+/* colors */
+/* Bright orange: hsl(31, 77%, 52%)
+Dark cyan: hsl(184, 100%, 22%)
+Very dark cyan: hsl(179, 100%, 13%) */
+
+/* Transparent white (paragraphs): hsla(0, 0%, 100%, 0.75)
+Very light gray (background, headings, buttons): hsl(0, 0%, 95%) */
+
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@100;700&family=Lexend+Deca&display=swap');/* Big Shoulders Display weight: 700 */
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');/* Lexend Deca weight: 700 */
+
+:root{
+    --clr-Primary-100: hsl(31, 77%, 52%);
+    --clr-Primary-200: hsl(184, 100%, 22%);
+    --clr-Primary-300: hsl(179, 100%, 13%);
+
+    --clr-Secondary-100:  hsla(0, 0%, 100%, 0.75);
+    --clr-Secondary-200: hsl(0, 0%, 95%);
+
+    /* fonts */
+    --fnt-lex-700: "Lexend Deca", sans-serif ;
+    --fnt-big-700: "Big Shoulders Display", cursive;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--clr-Secondary-200);
+    font-size: 15px;
+    overflow: hidden;
+}
+
+.container{
+    padding: 0 10rem 0 10rem;
+}
+
+
+.split-cards{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+}
+
+@media (max-width: 600px){
+    .split-cards{
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row wrap;
+        align-items: center;
+        
+    }
+}
+
+.card{
+    max-width: 20.025em;
+}
+
+.card img{
+    position: relative;
+    padding: 1.5rem 0 0 1.5rem;
+}
+
+.card h3{
+    text-transform: uppercase;
+    color: var(--clr-Secondary-200);
+    font-weight: 700;
+    font-family: var(--fnt-big-700);
+    padding-left: 1.5rem;
+}
+
+.card p{
+    color: var(--clr-Secondary-100);
+    padding: 1.5rem;
+    font-weight: 400;
+    font-family: var(--fnt-lex-700);
+}
+
+.card a{
+    text-decoration: none;
+    display: flex;
+    padding: 1.5rem;
+    font-family: var(--fnt-lex-700);
+    font-weight: 400;
+    
+}
+.card a span{
+    padding: 10px 5px ;
+    border-radius: 20px;
+}
+
+
+.card__sedan{
+    background: var(--clr-Primary-100);
+    border-radius: 10px 0 0 10px;
+}
+
+@media (max-width: 600px){
+    .card__sedan{
+        border-radius: 10px 10px 0 0;
+    }
+}
+
+.card__sedan a span{
+    color: var(--clr-Primary-100);
+    background: var(--clr-Secondary-200);
+}
+
+.card__sedan a span:hover{
+    border: 1px solid var(--clr-Secondary-200);
+    color: var(--clr-Secondary-200);
+    background: var(--clr-Primary-100);
+    transition: 0.5s ease;
+}
+.card__suv{
+    background: var(--clr-Primary-200);
+}
+
+.card__suv a span{
+    background: var(--clr-Secondary-200);
+    color: var(--clr-Primary-200);
+    
+}
+.card__suv a span:hover{
+    border: 1px solid var(--clr-Secondary-200);
+    color: var(--clr-Secondary-200);
+    background: var(--clr-Primary-200);
+    transition: 0.5s ease;
+}
+.card__luxury{
+    background: var(--clr-Primary-300);
+    border-radius: 0 10px 10px 0;
+}
+
+.card__luxury a span:hover{
+    border: 1px solid var(--clr-Secondary-200);
+    color: var(--clr-Secondary-200);
+    background: var(--clr-Primary-300);
+    transition: 0.5s ease;
+}
+
+@media (max-width: 600px){
+    .card__luxury{
+        border-radius: 0 0 10px 10px;
+    }
+}
+
+.card__luxury a span{
+    background: var(--clr-Secondary-200);
+    color: var(--clr-Primary-300);
+}
+
+
+.footer{
+    position: absolute;
+    align-self: flex-end;
+}
